@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Page</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="javascript:hideTable(),hideTable2()">
+  <div class="agentpage">
+    <h1 class="mainhead">Welcome to Abdul Clinic</h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="Maintab(event, 'CheckSSN')" id="defaultOpen">List of Patients</button>
+      <button class="tablinks" onclick="Maintab(event, 'Patientinfo')">Patient Information</button>
+      <button class="tablinks" onclick="Maintab(event, 'Summary')">Summary of Patient Information</button>
+      <button class="tablinks" onclick="Maintab(event, 'Appointment')">Set an Appointment</button>
+    </div>
+    <div id="CheckSSN" class="tabcontent">
+      <form role="form" class="php-email-form">
+        <div class="form-group">
+          <label for="firstname">Enter Patient Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Enter FirstName"
+            data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <label for="dob">Enter Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="showssn"><button type="button"  onClick='javascript:showTable();' id="ShowSSN">Show Patient SSN List</button>
+          <button type="button"  onClick='javascript:hideTable();' id="ShowSSN">Hide Patient SSN List</button></div>
+        <table id='table' class="SSNlist">
+          <tr>
+            <th>SSN</th>
+            <th>Patient Name</th>
+            <th>Date of Birth</th>
+          </tr>
+          <tr>
+            <td> 1</td>
+            <td> Angelina</td>
+            <td> Delhi </td>
+          </tr>
+          <tr>
+            <td> 2</td>
+            <td> Simran </td>
+            <td> Mumbai </td>
+          </tr>
+          <tr>
+            <td> 3</td>
+            <td> Sania </td>
+            <td> Chennai </td>
+          </tr>
+          <tr>
+            <td> 4</td>
+            <td> Martina </td>
+            <td> Kolkata </td>
+          </tr>
+        </table>
+    </div>
+    </form>
+    <div id="Patientinfo" class="tabcontent">
+      <section id="appointment" class="appointment section-bg">
+        <div class="sect">
+          <h4 class="text">Enter The Patient Details Here</h4>
+          <form role="form" class="php-email-form">
+            <div>
+              <div class="form-group">
+                <label for="firstname">Enter First Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter FirstName"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="surname">Enter Surname</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter SurName"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="phno">Enter PhoneNo</label>
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number"
+                  data-rule="minlen:10" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="address">Enter Address</label>
+                <input type="text" class="form-control" name="address" id="adress" placeholder="Enter Address"
+                  data-rule="minlen:10" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div>
+              <div class="form-group">
+                <label for="dob">Enter Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+              </div>
+              <div class="form-group">
+                <label for="dob">Enter Department of Birth</label>
+                <input type="text" id="departmentOfBirth" name="dob">
+              </div>
+
+              <div class="savebutton"><button type="submit">Save Information</button></div>
+          </form>
+
+        </div>
+      </section>
+    </div>
+
+    <div id="Summary" class="tabcontent">
+      <h1>Patient Summary</h1>
+      <form>
+        <div class="Nss">
+          <label for="nss">Enter NSS</label>
+          <input type="text" name="nss" /></p>
+
+        </div>
+       
+        <div class="showssn"><button type="button"  onClick='javascript:showTable2();' id="ShowSummary">Show Patient Summary</button>
+          <button type="button"  onClick='javascript:hideTable2();' id="ShowSummary">Hide Patient Summary</button></div>
+        <table id='Summarytable' class="SSNlist">
+          <tr>
+            <th>Sr No</th>
+            <th>Patient Name</th>
+            <th>Date of Birth</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td> 1</td>
+            <td> Angelina</td>
+            <td> 05-04-1998 </td>
+            <td> Jack</td>
+            <td> 04-10-2022</td>
+            <td> 200£ </td>
+          </tr>
+          <tr>
+            <td> 2</td>
+            <td> Angelina</td>
+            <td> 05-04-1998 </td>
+            <td> Steven</td>
+            <td> 05-09-2022</td>
+            <td> 160£ </td>
+          </tr>
+          <tr>
+            <td> 3</td>
+            <td> Angelina</td>
+            <td> 05-04-1998 </td>
+            <td> Roger</td>
+            <td> 03-07-2022</td>
+            <td> 100£ </td>
+          </tr>
+          <tr>
+            <td> 4</td>
+            <td> Angelina</td>
+            <td> 05-04-1998 </td>
+            <td> Jack</td>
+            <td> 04-10-2022</td>
+            <td> 300£ </td>
+          </tr>
+        </table>
+      
+      </form>
+    </div>
+
+    <div id="Appointment" class="tabcontent">
+      <section id="appointment" class="appointment section-bg">
+        <div class="sect">
+          <h4 class="text">Enter The Patient Details Here</h4>
+          <form role="form" class="php-email-form">
+            <div>
+              <div class="form-group">
+                <label for="reason">Enter Reason</label>
+              <select name="reason" id="reason" class="form-select">
+                <option value="">Select Reason</option>
+                <option value="Doctor Leave">Doctor on Leave</option>
+                <option value="Time Matched">Time Matched</option>
+                <option value="Busy">Busy</option>
+              </select></div>
+              <div class="validate"></div>
+              <div class="form-group">
+                <label for="firstname">Enter Doctors Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Doctor Name"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="surname">Enter Speciality</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Speciality"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="dob">Enter Appointment Date</label>
+                <input type="date" id="dob" name="dob">
+              </div>
+              <div class="form-group">
+                <label for="dob">Enter Appointment Time</label>
+                <input type="time" id="dob" name="dob">
+              </div>
+              
+            </div>
+            <div>
+              <div class="savebutton"><button type="submit">Save Appointment</button></div>
+          </form>
+
+        </div>
+      </section>
+    </div>
+
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
+<!-- <
+                    <select name="department" id="department" class="form-select">
+                      <option value="">Select Department</option>
+                      <option value="Department 1">Department 1</option>
+                      <option value="Department 2">Department 2</option>
+                      <option value="Department 3">Department 3</option>
+                    </select>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <select name="doctor" id="doctor" class="form-select">
+                      <option value="">Select Doctor</option>
+                      <option value="Doctor 1">Doctor 1</option>
+                      <option value="Doctor 2">Doctor 2</option>
+                      <option value="Doctor 3">Doctor 3</option>
+                    </select>
+                    <div class="validate"></div>
+                  </div>
+                </div>
+      
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                </div> -->
